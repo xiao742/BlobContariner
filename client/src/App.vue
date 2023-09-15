@@ -23,6 +23,7 @@
 </template>
 
 <script>
+import { L2Dwidget } from 'live2d-widget'
 import AppNav from "@/components/AppNav";
 import AppSide from "@/components/AppSide";
 import Timer from "@/components/Timer";
@@ -35,6 +36,15 @@ export default {
   },
   methods: {
     ...mapMutations(["login"]),
+  },
+  created() {
+    setTimeout(function () {
+      L2Dwidget.init({
+        model: {
+          jsonPath: 'https://cdn.jsdelivr.net/gh/wangsrGit119/wangsr-image-bucket/L2Dwidget/live2d-widget-model-shizuku/assets/shizuku.model.json',
+        }
+      });
+    }, 1000);
   },
   async mounted() {
     //页面加载后，检测是否已经保存登录信息了

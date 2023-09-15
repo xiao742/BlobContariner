@@ -1,37 +1,45 @@
 <!--
  * @Author: Mr.xiao
  * @Date: 2022-12-12 17:45:36
- * @LastEditTime: 2023-09-15 13:57:39
+ * @LastEditTime: 2023-09-15 16:20:56
  * @LastEditors: 雨落潇潇
  * @Description: index.html
  * @text: 惑而不从师,其为惑也,终不解矣.
 -->
 <!DOCTYPE html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-    <link rel="stylesheet" href="<%= BASE_URL %>editor.md/css/editormd.css">
-    <script color="0,0,0" opacity="0.6" count="99" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.js" type="text/javascript" charset="utf-8"></script>
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="<%= BASE_URL %>editor.md/lib/marked.min.js"></script>
-    <script src="<%= BASE_URL %>editor.md/lib/prettify.min.js"></script>
 
-    <script src="<%= BASE_URL %>editor.md/lib/raphael.min.js"></script>
-    <script src="<%= BASE_URL %>editor.md/lib/underscore.min.js"></script>
-    <script src="<%= BASE_URL %>editor.md/lib/sequence-diagram.min.js"></script>
-    <script src="<%= BASE_URL %>editor.md/lib/flowchart.min.js"></script>
-    <script src="<%= BASE_URL %>editor.md/lib/jquery.flowchart.min.js"></script>
-    <script src="<%= BASE_URL %>editor.md/editormd.js"></script>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+  <link rel="stylesheet" href="<%= BASE_URL %>editor.md/css/editormd.css">
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="<%= BASE_URL %>editor.md/lib/marked.min.js"></script>
+  <script src="<%= BASE_URL %>editor.md/lib/prettify.min.js"></script>
+
+  <script src="<%= BASE_URL %>editor.md/lib/raphael.min.js"></script>
+  <script src="<%= BASE_URL %>editor.md/lib/underscore.min.js"></script>
+  <script src="<%= BASE_URL %>editor.md/lib/sequence-diagram.min.js"></script>
+  <script src="<%= BASE_URL %>editor.md/lib/flowchart.min.js"></script>
+  <script src="<%= BASE_URL %>editor.md/lib/jquery.flowchart.min.js"></script>
+  <script src="<%= BASE_URL %>editor.md/editormd.js"></script>
+</head>
+
+<body>
+  <script color="220,20,60" opacity=".8" count="199" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.js"
+    type="text/javascript" charset="utf-8"></script>
+
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+
 </html>

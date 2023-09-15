@@ -3,7 +3,7 @@
     <div class="content">
       <!--logo-->
       <div class="logo">
-        <a href="/">xiaorongfeng.fun</a>
+        <a href="/">WingFong.fun</a>
       </div>
       <!--导航-->
       <div class="nav">
@@ -93,14 +93,14 @@ export default {
 
     .logo {
       width: 130px;
-      height: 50px;
+      height: 100%;
 
       a {
         display: block;
         width: 100%;
         height: 100%;
-        line-height: 42px;
-        font-size: 26px;
+        // line-height: 42px;
+        font-size: 40px;
         letter-spacing: 5px;
         font-family: "Pacifico", "serif";
         color: rgba(0, 0, 0, 0.7);
