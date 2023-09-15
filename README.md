@@ -1,4 +1,4 @@
-# 1、client(前端代码)
+# client
 
 ## Project setup
 ```
@@ -17,9 +17,3 @@ npm run build
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-
-# 2、server(后端代码)
-### Compiles and hot-reloads
-```
-npm run start
-```
