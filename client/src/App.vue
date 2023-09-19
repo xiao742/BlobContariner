@@ -90,12 +90,14 @@ body {
     height: 50px;
   }
   > .footer {
+    animation: animate 2s;
+    transition: 0.6s;
     display: flex;
     box-sizing: border-box;
     width: 100%;
     max-width: 1300px;
     padding: 0 15px;
-    margin: 102px auto 0;
+    margin: 102px auto;
 
     > .f-content {
       overflow: hidden;
@@ -130,5 +132,15 @@ body {
 
 .el-popover {
   min-width: 50px !important;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 </style>
