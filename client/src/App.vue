@@ -39,13 +39,11 @@ export default {
     ...mapMutations(["login"]),
   },
   created() {
-    setTimeout(function () {
-      L2Dwidget.init({
-        model: {
-          jsonPath: 'https://cdn.jsdelivr.net/gh/wangsrGit119/wangsr-image-bucket/L2Dwidget/live2d-widget-model-shizuku/assets/shizuku.model.json',
-        }
-      });
-    }, 1000);
+    L2Dwidget.init({
+      model: {
+        jsonPath: 'https://cdn.jsdelivr.net/gh/wangsrGit119/wangsr-image-bucket/L2Dwidget/live2d-widget-model-shizuku/assets/shizuku.model.json',
+      }
+    });
   },
   async mounted() {
     // 点击特效
@@ -92,8 +90,6 @@ body {
     height: 50px;
   }
   > .footer {
-    animation: animate 2s;
-    transition: 0.6s;
     display: flex;
     box-sizing: border-box;
     width: 100%;
@@ -134,15 +130,5 @@ body {
 
 .el-popover {
   min-width: 50px !important;
-}
-@keyframes animate {
-  0% {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 </style>
