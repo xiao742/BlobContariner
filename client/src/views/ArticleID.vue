@@ -66,6 +66,8 @@ export default {
 
 <style scoped lang="less">
 #ArticleID {
+  animation: animate 2s;
+  transition: 0.6s;
   position: relative;
   box-sizing: border-box;
   overflow: hidden;
@@ -87,6 +89,16 @@ export default {
   #article-content {
     max-width: 100% !important;
     padding: 0 !important;
+  }
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 </style>

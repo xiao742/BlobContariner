@@ -70,6 +70,9 @@ export default {
     &.top {
       width: 100%;
       background-color: #bfe2e6;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+
       .img {
         overflow: hidden;
         float: left;
@@ -118,6 +121,8 @@ export default {
       width: 100%;
       padding: 20px 0;
       background-color: #fff;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
       a {
         display: block;
         width: 65%;

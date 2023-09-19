@@ -1,3 +1,11 @@
+<!--
+ * @Author: Mr.xiao
+ * @Date: 2022-12-12 17:45:36
+ * @LastEditTime: 2023-09-18 14:05:22
+ * @LastEditors: 雨落潇潇
+ * @Description: 
+ * @text: 惑而不从师,其为惑也,终不解矣.
+-->
 <template>
   <div id="Visitor">
     <h4>最近访客</h4>
@@ -47,6 +55,7 @@ export default {
   margin-top: 15px;
   box-shadow: 0 0 4px #ddd;
   padding: 20px;
+  border-radius: 5px;
   > h4 {
     line-height: 20px;
     padding-bottom: 10px;

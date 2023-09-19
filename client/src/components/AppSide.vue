@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.xiao
  * @Date: 2022-12-12 17:45:36
- * @LastEditTime: 2023-09-15 14:20:07
+ * @LastEditTime: 2023-09-18 12:52:35
  * @LastEditors: 雨落潇潇
  * @Description: 
  * @text: 惑而不从师,其为惑也,终不解矣.
@@ -20,8 +20,13 @@
     >
       <!--热门文章-->
       <HotArticle></HotArticle>
+      <!-- 日历 -->
+      <div class="right_container">
+        <Calendar></Calendar>
+      </div>
       <!--最新访客-->
       <Visitor></Visitor>
+
     </div>
 
   </div>
@@ -31,11 +36,11 @@
 import Personal from "@/components/Personal";
 import HotArticle from "@/components/HotArticle";
 import Visitor from "@/components/Visitor";
-
+import Calendar from "@/components/Calendar";
 export default {
   name: "AppSide",
   components: {
-    Personal, HotArticle, Visitor
+    Personal, HotArticle, Visitor, Calendar
   },
   data() {
     return {

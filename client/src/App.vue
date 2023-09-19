@@ -13,9 +13,8 @@
         <router-view />
       </div>
     </div>
-    <!-- 时间 -->
-    <div class="timer">
-      <Timer></Timer>
+    <div class="switch">
+      <Switch></Switch>
     </div>
     <!--备案号-->
     <p class="copyright">黔ICP备19002644号</p>
@@ -24,15 +23,17 @@
 
 <script>
 import { L2Dwidget } from 'live2d-widget'
+import { mapMutations } from "vuex";
 import AppNav from "@/components/AppNav";
 import AppSide from "@/components/AppSide";
-import Timer from "@/components/Timer";
-import { mapMutations } from "vuex";
+import Switch from "@/components/Switch";
+import clickSpecialEffect from "@/utils/clickSpecialEffect";
+import bgSpecialEffect from "@/utils/bgSpecialEffect";
 export default {
   components: {
     AppNav,
     AppSide,
-    Timer
+    Switch
   },
   methods: {
     ...mapMutations(["login"]),
@@ -47,6 +48,10 @@ export default {
     }, 1000);
   },
   async mounted() {
+    // 点击特效
+    clickSpecialEffect();
+    // 背景特效
+    bgSpecialEffect();
     //页面加载后，检测是否已经保存登录信息了
     let { data } = await this.$axios({
       method: "post",
@@ -65,9 +70,9 @@ export default {
 @import "./assets/css/font/iconfont.css";
 
 body {
-  background: url("./assets/img/bg/bg-left.png") no-repeat left 50px,
-    url("./assets/img/bg/bg-right.png") no-repeat right 50px;
-  background-color: rgb(242, 242, 242);
+  background: url("./assets/img/bg/bg-left.png") no-repeat left top 50px,
+    url("./assets/img/bg/bg-right.png") no-repeat right top 50px;
+  background-color: rgb(242, 242, 242, 0.5);
 }
 
 html,
@@ -87,12 +92,14 @@ body {
     height: 50px;
   }
   > .footer {
+    animation: animate 2s;
+    transition: 0.6s;
     display: flex;
     box-sizing: border-box;
     width: 100%;
     max-width: 1300px;
     padding: 0 15px;
-    margin: 120px auto 0;
+    margin: 102px auto 0;
 
     > .f-content {
       overflow: hidden;
@@ -102,7 +109,7 @@ body {
   }
   > .copyright {
     padding: 20px 0;
-    font-weight: 400;
+    font-weight: bolder;
     text-align: center;
     font-size: 12px;
     letter-spacing: 2px;
@@ -127,5 +134,15 @@ body {
 
 .el-popover {
   min-width: 50px !important;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 </style>

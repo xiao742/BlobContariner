@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.xiao
  * @Date: 2022-12-12 17:45:36
- * @LastEditTime: 2023-09-14 16:53:28
+ * @LastEditTime: 2023-09-18 16:16:34
  * @LastEditors: 雨落潇潇
  * @Description: 主页
  * @text: 惑而不从师,其为惑也,终不解矣.
@@ -34,6 +34,8 @@ export default {
 
 <style scoped lang="less">
 #Home {
+  animation: animate 2s;
+  transition: 0.6s;
   font-family: "Quicksand", "Microsoft YaHei", sans-serif;
   /deep/ article {
     background-color: #fff;
@@ -59,6 +61,16 @@ export default {
         color: #aaa;
       }
     }
+  }
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 </style>

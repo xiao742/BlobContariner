@@ -114,7 +114,7 @@
               >
               <i
                 v-else
-                class="el-icon-plus avatar-uploader-icon"
+                class="el-icon-upload avatar-uploader-icon"
               ></i>
             </el-upload>
           </el-tab-pane>
@@ -123,7 +123,7 @@
     </article>
     <article v-else>
       <h2>用户信息</h2>
-      <p>暂未登陆，无信息。
+      <p>暂未登陆，无信息!!!
         <router-link to="/">返回首页</router-link>
       </p>
     </article>
@@ -307,6 +307,8 @@ export default {
 
 <style scoped lang="less">
 #UserInfo {
+  animation: animate 2s;
+  transition: 0.6s;
   article {
     box-sizing: border-box;
     width: 100%;
@@ -381,6 +383,16 @@ export default {
 }
 /deep/.el-button--primary {
   margin-left: 20px;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 </style>
 

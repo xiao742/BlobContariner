@@ -1,9 +1,17 @@
+/*
+ * @Author: Mr.xiao
+ * @Date: 2022-12-12 17:45:36
+ * @LastEditTime: 2023-09-18 10:48:01
+ * @LastEditors: 雨落潇潇
+ * @Description: 
+ * @text: 惑而不从师,其为惑也,终不解矣.
+ */
 const express = require("express")
 
 const router = express.Router()
 
 //登陆路由
-router.use("/login",require("./login/index"))
+router.use("/login", require("./login/index"))
 
 //注册路由
 router.use("/reg", require("./register/index"))

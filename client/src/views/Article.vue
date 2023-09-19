@@ -72,6 +72,8 @@ export default {
 
 <style scoped lang="less">
 #Article {
+  animation: animate 2s;
+  transition: 0.6s;
   article {
     box-sizing: border-box;
     position: relative;
@@ -172,6 +174,16 @@ export default {
     &:hover {
       box-shadow: 0 3px 5px #bbb;
     }
+  }
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 </style>

@@ -1,14 +1,14 @@
 <!--
  * @Author: Mr.xiao
  * @Date: 2023-09-15 11:10:38
- * @LastEditTime: 2023-09-15 14:16:11
+ * @LastEditTime: 2023-09-18 15:03:46
  * @LastEditors: 雨落潇潇
  * @Description: timer
  * @text: 惑而不从师,其为惑也,终不解矣.
 -->
 <template>
   <div
-    v-if="timer"
+    v-show="timer"
     class="box"
   >
     {{ timer }}
@@ -26,9 +26,9 @@ export default {
   created() {
     setInterval(() => {
       let date = new Date()
-      let year = date.getFullYear()
-      let month = date.getMonth() < 10 ? `0${date.getMonth() + 1}` : date.getMonth() + 1
-      let date1 = date.getDate() < 10 ? `0${date.getDate()}` : date.getDate()
+      // let year = date.getFullYear()
+      // let month = date.getMonth() < 10 ? `0${date.getMonth() + 1}` : date.getMonth() + 1
+      // let date1 = date.getDate() < 10 ? `0${date.getDate()}` : date.getDate()
       let day = date.getDay()
       let hours = date.getHours() < 10 ? `0${date.getHours()}` : date.getHours()
       let mimute = date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes()
@@ -40,7 +40,8 @@ export default {
           dayCycle = `星期${dayArr[i]}`
         }
       }
-      let str = `${year}-${month}-${date1} ${dayCycle} ${hours}:${mimute}:${second}`
+      let str = `
+      ${dayCycle} ${hours}:${mimute}:${second}`
       this.timer = str
     }, 1000)
   }
@@ -49,7 +50,8 @@ export default {
 
 <style scoped lang="less">
 .box {
-  background-image: linear-gradient(to bottom right, #00dcff, gold);
+  // background-image: linear-gradient(to bottom right, #d4e4e7, #d7d1b2, #a2b5b8);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 .box {
   // width: 976px;
@@ -57,9 +59,10 @@ export default {
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 6px;
   position: fixed;
-  right: 0%;
-  top: 10%;
+  right: 10%;
+  top: 3%;
   transform: translate(-50%, -50%);
+  opacity: 0.5;
   box-shadow: 1px 1px 10px #fff;
   text-shadow: 0px 1px 30px white;
   display: flex;

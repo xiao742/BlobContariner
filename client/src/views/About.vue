@@ -42,6 +42,8 @@ export default {
 
 <style lang="less" scoped>
 #About {
+  animation: animate 2s;
+  transition: 0.6s;
   article {
     box-sizing: border-box;
     width: 100%;
@@ -82,6 +84,16 @@ export default {
         text-decoration: underline;
       }
     }
+  }
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 </style>

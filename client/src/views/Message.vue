@@ -335,6 +335,8 @@ export default {
 
 <style scoped lang="less">
 #Message {
+  animation: animate 2s;
+  transition: 0.6s;
   article {
     box-sizing: border-box;
     width: 100%;
@@ -529,6 +531,16 @@ export default {
         float: right;
       }
     }
+  }
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 </style>

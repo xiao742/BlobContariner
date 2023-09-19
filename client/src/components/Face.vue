@@ -30,17 +30,24 @@
         >退出登录</el-button>
       </div>
     </el-popover>
-
+    <!-- 时间 -->
+    <!-- <div class="timer">
+      <Timer></Timer>
+    </div> -->
   </div>
 </template>
 
 <script>
 import { mapState } from "vuex"
+import Timer from "@/components/Timer";
 export default {
   name: "Face",
   data() {
     return {
     }
+  },
+  components: {
+    Timer
   },
   computed: {
     ...mapState(['userInfo'])
@@ -72,7 +79,8 @@ export default {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  box-shadow: 0 0 5px #555;
+  box-shadow: 1px 1px 10px #fff;
+  // box-shadow: 0 0 5px #555;
   cursor: pointer;
   .img {
     width: 100%;

@@ -76,6 +76,15 @@ export default {
   height: 86px;
   background-color: #fff;
   box-shadow: 0 0 2px #999;
+  opacity: 1;
+  background-image: linear-gradient(
+    to bottom right,
+    #e0ffff,
+    #afeeee,
+    #e0ffff,
+    #afeeee
+  );
+  // background-image: linear-gradient(to bottom right, #d4e4e7, #d7d1b2, #a2b5b8);
 
   .content {
     display: flex;

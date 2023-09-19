@@ -48,6 +48,7 @@ export default {
   font-family: "Quicksand", "sans-serif";
 
   box-shadow: 0 0 4px #ddd;
+  border-radius: 5px;
   background-color: #fff;
   padding: 20px;
 
