@@ -3,18 +3,11 @@
   <article class="hello">
     <h2>HELLO!</h2>
     <p class="des">
-      你好！欢迎来到我的博客！我是一名<span data-v-13314fca="">有点肾虚的</span
-      >WEB前端攻城狮，热衷于研究JavaScript、NodeJs、Vue、React、WebGL、Flutter、Electron……这是我的主页！我会在这里发表一些<span
-        data-v-13314fca=""
-        >不成熟的</span
-      >技术文章，记录一些<span data-v-13314fca="">沙雕的</span
-      >日常。博客目前使用的是Vue + Nuxt + Element + Node + Express +
+      你好！欢迎来到我的博客！我是一名<span>有点肾虚的</span>WEB前端攻城狮，热衷于研究JavaScript、NodeJs、Vue、React、WebGL、Flutter、Electron……这是我的主页！我会在这里发表一些<span>不成熟的</span>技术文章，记录一些<span>沙雕的</span>日常。博客目前使用的是Vue + Nuxt + Element + Node + Express +
       MongoDB搭建的，如果对源码感兴趣的话可以<a
         href="https://github.com/xiao742/Blog"
         target="_blank"
-        data-v-13314fca=""
-        >点击这里</a
-      >。欢迎提出宝贵的建议哦！
+      >点击这里</a>。欢迎提出宝贵的建议哦！
     </p>
     <div class="info">
       <div class="personal">
@@ -26,7 +19,7 @@
           </li>
           <li>
             <p class="dt">ADDRESS</p>
-            <p class="dd">贵州省都匀市</p>
+            <p class="dd">贵州省毕节市纳雍县</p>
           </li>
           <li>
             <p class="dt">EMAIL</p>
@@ -35,9 +28,10 @@
           <li>
             <p class="dt">GITHUB</p>
             <p class="dd">
-              <a href="https://github.com/xiao742" target="_blank"
-                >https://github.com/xiao742</a
-              >
+              <a
+                href="https://github.com/xiao742"
+                target="_blank"
+              >https://github.com/xiao742</a>
             </p>
           </li>
         </ul>
@@ -112,6 +106,17 @@ export default {
 </script>
 
 <style scoped lang="less">
+* {
+  margin: 0;
+  padding: 0;
+}
+.des {
+  span {
+    font-weight: bold;
+    font-style: oblique;
+    font-size: larger;
+  }
+}
 .hello {
   div.info {
     display: flex;
