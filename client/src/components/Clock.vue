@@ -456,7 +456,7 @@ body {
   text-align: center;
   width: 16em;
   height: 16em;
-  z-index: 99;
+  z-index: 98;
 }
 .progress-clock__time-date,
 .progress-clock__time-digit,
@@ -466,6 +466,7 @@ body {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
+  cursor: pointer;
 }
 .progress-clock__time-date,
 .progress-clock__time-digit {

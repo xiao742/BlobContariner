@@ -101,7 +101,7 @@ export default {
     /*logo*/
 
     .logo {
-      width: 130px;
+      // width: 130px;
       height: 100%;
 
       a {
