@@ -14,25 +14,22 @@
         <span data-unit="mo">January</span>
         <span data-unit="d">1</span>
       </button>
-      <div class="time">
-        <button
-          class="progress-clock__time-digit"
-          data-unit="h"
-          data-group="h"
-          type="button"
-        >12</button><span class="progress-clock__time-colon">:</span><button
-          class="progress-clock__time-digit"
-          data-unit="m"
-          data-group="m"
-          type="button"
-        >00</button><span class="progress-clock__time-colon">:</span><button
-          class="progress-clock__time-digit"
-          data-unit="s"
-          data-group="s"
-          type="button"
-        >00</button>
-
-      </div>
+      <button
+        class="progress-clock__time-digit"
+        data-unit="h"
+        data-group="h"
+        type="button"
+      >12</button><span class="progress-clock__time-colon">:</span><button
+        class="progress-clock__time-digit"
+        data-unit="m"
+        data-group="m"
+        type="button"
+      >00</button><span class="progress-clock__time-colon">:</span><button
+        class="progress-clock__time-digit"
+        data-unit="s"
+        data-group="s"
+        type="button"
+      >00</button>
       <span
         class="progress-clock__time-ampm"
         data-unit="ap"
@@ -291,6 +288,7 @@ export default {
           }
         }
         update() {
+          // document.querySelector(".progress-clock__time-ampm").
           this.time = new Date();
 
           if (this.el) {
@@ -439,7 +437,7 @@ body {
   padding: 20px;
 
   margin-bottom: 15px;
-  > h4.clock {
+  > .clock {
     font-family: "Quicksand", "sans-serif";
     line-height: 20px;
     padding-bottom: 10px;
@@ -475,7 +473,8 @@ body {
 }
 .progress-clock__time-date,
 .progress-clock__time-ampm {
-  grid-column: 1 / 6;
+  grid-column-start: 1;
+  grid-column-end: 6;
 }
 .progress-clock__time-date {
   font-size: 0.75em;
@@ -550,7 +549,6 @@ body {
 [data-group="s"]:hover ~ .progress-clock__rings [data-units="s"] {
   opacity: 1;
 }
-
 /* Dark theme */
 @media (prefers-color-scheme: dark) {
   :root {
