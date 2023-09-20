@@ -96,6 +96,7 @@ body {
     box-sizing: border-box;
     width: 100%;
     max-width: 1300px;
+    min-height: 100vh;
     padding: 0 15px;
     margin: 102px auto;
 

@@ -1,14 +1,14 @@
 <!--
  * @Author: Mr.xiao
  * @Date: 2022-12-12 17:45:36
- * @LastEditTime: 2023-09-18 14:05:22
+ * @LastEditTime: 2023-09-20 10:48:19
  * @LastEditors: 雨落潇潇
  * @Description: 
  * @text: 惑而不从师,其为惑也,终不解矣.
 -->
 <template>
   <div id="Visitor">
-    <h4>最近访客</h4>
+    <h4>Recent Visitors</h4>
     <ul>
       <li
         v-for="item in visitorList"
