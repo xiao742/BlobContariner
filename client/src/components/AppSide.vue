@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.xiao
  * @Date: 2022-12-12 17:45:36
- * @LastEditTime: 2023-09-20 10:53:49
+ * @LastEditTime: 2023-09-21 18:03:53
  * @LastEditors: 雨落潇潇
  * @Description: 
  * @text: 惑而不从师,其为惑也,终不解矣.
@@ -10,7 +10,8 @@
   <div id="AppSide">
     <!--个人信息-->
     <Personal />
-
+    <!-- 时钟 -->
+    <Clock></Clock>
     <!--吸附大盒子-->
     <div
       class="sticky"
@@ -18,14 +19,13 @@
         'fixed': ifFixed
       }"
     >
-      <!-- 时钟 -->
-      <Clock></Clock>
       <!--热门文章-->
       <HotArticle></HotArticle>
-      <!-- 日历 -->
-      <Calendar></Calendar>
+
       <!--最新访客-->
       <Visitor></Visitor>
+      <!-- 日历 -->
+      <Calendar></Calendar>
 
     </div>
 
@@ -54,7 +54,7 @@ export default {
       window.addEventListener("scroll", () => {
         let scrollTop = document.documentElement.scrollTop
         console.log(scrollTop)
-        this.ifFixed = scrollTop >= 240
+        this.ifFixed = scrollTop >= 570
       })
     }
   },
@@ -75,7 +75,7 @@ export default {
       position: fixed;
       position: -webkit-sticky;
       top: 88px;
-      z-index: 99;
+      z-index: 1;
     }
   }
 }

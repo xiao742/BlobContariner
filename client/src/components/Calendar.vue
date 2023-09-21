@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.xiao
  * @Date: 2023-09-18 11:25:36
- * @LastEditTime: 2023-09-20 11:55:59
+ * @LastEditTime: 2023-09-20 22:30:02
  * @LastEditors: 雨落潇潇
  * @Description: 日历
  * @text: 惑而不从师,其为惑也,终不解矣.
@@ -69,8 +69,8 @@ export default {
     border-bottom: 1px solid #e8e9e7;
     color: #383937;
     font-size: 16px;
-    margin-bottom: 20px;
-    padding: 20px 20px 10px 20px;
+    margin: 15px;
+    padding-bottom: 10px;
   }
   .calendar_container {
     padding: 0px 10px 20px 10px;

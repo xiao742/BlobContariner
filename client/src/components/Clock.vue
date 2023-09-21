@@ -434,9 +434,9 @@ body {
   box-shadow: 0 0 4px #ddd;
   border-radius: 5px;
   background-color: #fff;
-  padding: 20px;
+  padding: 15px;
 
-  margin-bottom: 15px;
+  margin: 15px 0;
   > .clock {
     font-family: "Quicksand", "sans-serif";
     line-height: 20px;
@@ -444,7 +444,6 @@ body {
     border-bottom: 1px solid #e8e9e7;
     color: #383937;
     font-size: 16px;
-    margin-bottom: 20px;
   }
 }
 

@@ -50,7 +50,7 @@ export default {
   box-shadow: 0 0 4px #ddd;
   border-radius: 5px;
   background-color: #fff;
-  padding: 20px;
+  padding: 15px;
 
   > h4 {
     line-height: 20px;

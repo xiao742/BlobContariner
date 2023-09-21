@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.xiao
  * @Date: 2022-12-12 17:45:36
- * @LastEditTime: 2023-09-20 10:48:19
+ * @LastEditTime: 2023-09-20 22:28:17
  * @LastEditors: 雨落潇潇
  * @Description: 
  * @text: 惑而不从师,其为惑也,终不解矣.
@@ -54,9 +54,10 @@ export default {
   width: 100%;
   margin-top: 15px;
   box-shadow: 0 0 4px #ddd;
-  padding: 20px;
+  padding: 15px;
   border-radius: 5px;
   > h4 {
+    font-family: "Quicksand", "sans-serif";
     line-height: 20px;
     padding-bottom: 10px;
     border-bottom: 1px solid #e8e9e7;

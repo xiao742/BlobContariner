@@ -9,7 +9,7 @@
       :model="ruleForm"
       :rules="rules"
       status-icon
-      ref="Goudan"
+      ref="contactForm"
       class="demo-ruleForm"
     >
       <el-form-item
@@ -30,7 +30,10 @@
           v-model="ruleForm.email"
         ></el-input>
       </el-form-item>
-      <el-form-item label="Subject">
+      <el-form-item
+        prop="subject"
+        label="Subject"
+      >
         <el-input
           type="text"
           v-model="ruleForm.subject"
@@ -72,8 +75,12 @@ export default {
         name: [
           { required: true, trigger: "blur" }
         ],
+
         email: [
           { type: "email", required: true, trigger: "blur" }
+        ],
+        subject: [
+          { required: true, trigger: "blur" }
         ],
         message: [
           { required: true, trigger: "blur" }
@@ -84,10 +91,36 @@ export default {
   methods: {
     handleContactSubmit() {
       //验证表单的所有数据是否准确
-      this.$refs.Goudan.validate(vaild => {
+      this.$refs.contactForm.validate(async vaild => {
         if (vaild) {
+          console.log(vaild, "vaild")
           //通过所有数据的验证
           console.log("发送请求给后端")
+          //验证通过
+          let { data } = await this.$axios({
+            method: "post",
+            url: "/visit/send",
+            data: {
+              name: this.ruleForm.name,
+              email: this.ruleForm.email,
+              subject: this.ruleForm.subject,
+              message: this.ruleForm.message,
+            },
+          });
+          console.log(data, "data")
+          if (data.code === 0) {
+            this.$message({
+              type: "success",
+              duration: 1500,
+              message: data.msg,
+            });
+          } else {
+            this.$message({
+              type: "error",
+              duration: 1500,
+              message: data.msg,
+            });
+          }
         } else {
           //验证不通过
           return false
