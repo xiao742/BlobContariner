@@ -52,7 +52,7 @@ router.post("/send", (req, res) => {
     to: "2305742401@qq.com",
     subject: subject || "博客那些事儿",
     html: `
-    <h2>发件人：${name}</h2>
+    <h2>发件人：${name},《${email}》</h2>
     <div>消息： ${message}</div>
     <p><${new Date()}/p>
     `,
